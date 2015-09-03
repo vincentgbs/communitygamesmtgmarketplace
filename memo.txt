@@ -1,0 +1,17 @@
+This is an application built on Laravel 5, but not in Laravel.
+Some examples:
+1. I did not use migrations but instead just placed a sequel dump within the database folder.
+2. I also did not use Eloquent because of my familiarity with MySql.
+3. I created custom get and post functions within the controller class for filtering user input.
+etc.
+
+I created a clean repository with my last version of the project because some of my previous commits included personal data.
+
+There's a couple quickly-hacked (sloppy) solutions that I didn't bother to work on (I tried to comment most of them), but overall, this is a working marketplace with the ability to register as users and buy and sell products.
+It was designed to allow for the "easiest" buyer interface possible.
+
+This set up was tested and working on a local environment with VirtualBox (version 4.3.28r100309), on homestead (version 0.2.6).
+Specs running within VirtualBox:
+Linux homestead 3.16.0-23-generic #31-Ubuntu SMP Tue Oct 21 17:56:17 UTC 2014 x86_64
+Ubuntu 14.10 (GNU/Linux 3.16.0-23-generic x86_64)
+PHP Version 5.6.7-1+deb.sury.org~utopic+1
