@@ -1,27 +1,33 @@
-## Laravel PHP Framework
+## Community Games Marketplace
+
+This is a clean restart of the repository that was used to run the Community Games Marketplace.
+I created a new repository using the last version of the project because some of the previous commits accidentally included personal data.
+While the marketplace was live, this was a private repository hosted on Bitbucket. However, after closing it down, I decided to make the repository public so others can reference how the features were deployed.
+
+## Custom Marketplace Features
+* Sellers could manage their inventory through these functions:
+    * Route::get('sell', 'SellController@allInventory');
+    * Route::post('sell/registering', 'UserController@processSellerRegistration');
+    * Route::post('sell/remove', 'SellController@deleteInventory');
+    * Route::get('sell/orders', 'SellController@orderDetails');
+    * Route::post('sell/updateShipment', 'SellController@itemShipped');
+* Buyers could find and purchase items through these functions:
+    * Route::get('cart', 'BuyController@shoppingCart');
+    * Route::post('addToCart', 'BuyController@addToCart');
+    * Route::post('updateCart', 'BuyController@updateCart');
+    * Route::get('checkout', 'BuyController@previewOrder');
+    * Route::post('payment', 'PaypalController@postPayment');
+* Buyers and sellers could message each other through the marketplace
+    * Route::get('mail/inbox', 'MailController@messages');
+    * Route::post('mail/send', 'MailController@sendMessage');
+    * Route::post('mail/users', 'UserController@userIds');
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+
+## Official Laravel Documentation
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
 Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
-
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
