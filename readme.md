@@ -22,8 +22,6 @@ While the marketplace was live, this was a private repository hosted on Bitbucke
     * Route::post('mail/send', 'MailController@sendMessage');
     * Route::post('mail/users', 'UserController@userIds');
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-
 ## Official Laravel Documentation
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
